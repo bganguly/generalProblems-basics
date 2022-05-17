@@ -1,6 +1,5 @@
 Following is a list of some typical interview non-coding 'definition' questions seen.  
-Note: If you face ***only*** these non-coding questions in interview (especially from 'prime vendor'  
-/'implementation partner' or other companies), its a clear sign that you should  
+Note: If you face ***only*** these non-coding questions in interview, its a clear sign that you should  
 look elsewhere , if engineering interests you even remotely. 
 
 React:  

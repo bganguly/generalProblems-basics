@@ -9,8 +9,11 @@ the component discussions
 - general props vs state questions
 - can props be set from state etc
 - how to pass state from parent to child component
+- how to pass state from child to parent
 - discuss routing  
 -- Hint: be aware of how this has evolved over the years
+- discuss trends in state management as seen from docs  
+-- Hint: need to know current 'stance'/philosophy of redux - from both react's point of view as well as redux's
 
 JS:
 - event loop  

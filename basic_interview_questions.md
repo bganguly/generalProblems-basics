@@ -4,7 +4,7 @@ Note: If you face **only** these non-coding questions in interview (especially f
 look elsewhere , if engineering interests you even remotely.  
 
 React:  
-- Discuss first order/pure  functions vs higher order functions  
+- Discuss first order/pure functions vs higher order functions  
 -- Hint: read about these but also be aware of current search results of these vs 
 the component discussions
 - general props vs state questions
@@ -18,3 +18,11 @@ JS:
 -- Hint: what is unusual (if anything) relative to other laguages  
 - variable scope and resolution  
 -- Hint: Discuss local/global/shadowing
+
+DOM APIs and concepts:
+- Shadow dom and references/usage in react vs angular  
+-- Hint: need to know current state of official documentation on both frameworks plus MDN  
+
+Semver:
+- discuss concepts  
+-- Hint: pay attention to sub-unity major versions

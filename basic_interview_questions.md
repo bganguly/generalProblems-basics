@@ -10,11 +10,11 @@ the component discussions
 - general props vs state questions
 - can props be set from state etc
 - how to pass state from parent to child component
-- discuss routing
+- discuss routing  
 -- Hint: be aware of how this has evolved over the years
 
 JS:
-- event loop
--- Hint: what is unusual (if anything) relative to other laguages
-- variable scope and resolution
+- event loop  
+-- Hint: what is unusual (if anything) relative to other laguages  
+- variable scope and resolution  
 -- Hint: Discuss local/global/shadowing

@@ -13,7 +13,8 @@ the component discussions
 - discuss routing  
 -- Hint: be aware of how this has evolved over the years
 - discuss trends in state management as seen from docs  
--- Hint: need to know current 'stance'/philosophy of redux - from both react's point of view as well as redux's
+-- Hint: need to know current 'stance'/philosophy of any necessity of using redux 
+from both react's point of view as well as redux's
 
 JS:
 - event loop  

@@ -88,8 +88,8 @@ console.log(typeof placeholder_normal_obj_01.some_property === 'undefined'); //t
 placeholder_normal_func.prototype = new function() {
   this.some_property = 'some_value';
 }
-placeholder_normal_obj_02 = new placeholder_normal_func();
-placeholder_normal_obj_03 = new placeholder_normal_func();
+var placeholder_normal_obj_02 = new placeholder_normal_func();
+var placeholder_normal_obj_03 = new placeholder_normal_func();
 // below returns true - (instance was created before chaining prototype)
 console.log(typeof placeholder_normal_obj_01.some_property === 'undefined'); // true 
 // below returns false - (instance creation calls 'super')

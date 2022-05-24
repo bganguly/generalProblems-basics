@@ -3,7 +3,10 @@ Note: If you face ***only*** these non-coding questions in interview, its a clea
 look elsewhere , if engineering interests you even remotely. 
 
 React:  
-- Discuss first order/pure functions vs higher order functions  
+- Discuss  
+-- first order / first class function  
+-- pure functions  
+-- vs higher order functions  
 -- Hint: read about these but also be aware of current search results of these vs 
 the component discussions
 - general props vs state questions

@@ -1,7 +1,3 @@
-**Following is a list of some typical interview non-coding 'definition' questions seen.  
-Note: If you face ***only*** these non-coding questions in interview, its a clear sign that you should  
-look elsewhere , if engineering interests you even remotely.**
-
 **=> Company A**   
 
 React:  
@@ -36,17 +32,17 @@ React:
 - syntax to alter state
 - discuss routing  
 
-**Following is a list of some typical almost-coding questions seen.  
-Their presence implies interviewer has an active interest in code , in general.**
+**=> General questions**
 
-data structures:
+data structures:  
+- big o summary - https://www.bigocheatsheet.com/  
 - discuss space/time complexity of sorting array of  unordered integers  
 - discuss space/time complexity of finding the index of some value (search operation)  
--- when array is ordered | when unordered  
+-- when array is ordered  
+-- when array is unordered  
 - discuss sorting an array when values are bounded (say we know that each
 value is limited to be a positive integer upto 50, but that the array itself is of size n)  
 -- discuss space/time complexity - https://www.techiedelight.com/efficiently-sort-array-duplicated-values/
-- big o summary - https://www.bigocheatsheet.com/
 
 DOM APIs and concepts:
 - Shadow dom and references/usage in react vs angular  

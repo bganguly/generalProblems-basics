@@ -46,6 +46,7 @@ data structures:
 - discuss sorting an array when values are bounded (say we know that each
 value is limited to be a positive integer upto 50, but that the array itself is of size n)  
 -- discuss space/time complexity - https://www.techiedelight.com/efficiently-sort-array-duplicated-values/
+- big o summary - https://www.bigocheatsheet.com/
 
 DOM APIs and concepts:
 - Shadow dom and references/usage in react vs angular  

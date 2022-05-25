@@ -8,9 +8,6 @@ React:
 -- Hint: read about these but also be aware of current search results of these vs 
 the component discussions (that is mdn vs reactjs docs)
 - general props vs state questions
-- can props be set from state etc
-- how to pass state from parent to child component
-- how to pass state from child to parent
 - discuss routing  
 -- Hint: be aware of how this has evolved over the years
 - discuss trends in state management as seen from docs  
@@ -26,7 +23,7 @@ JS:
 **=> Company B**     
 
 React:  
-- Discuss  higher order components
+- Discuss higher order components
 - general props vs state questions
 - syntax to create component
 - syntax to alter state
@@ -43,6 +40,12 @@ data structures:
 - discuss sorting an array when values are bounded (say we know that each
 value is limited to be a positive integer upto 50, but that the array itself is of size n)  
 -- discuss space/time complexity - https://www.techiedelight.com/efficiently-sort-array-duplicated-values/
+
+React
+- can props be set from state etc
+- how to pass state from parent to child component
+- how to pass state from child to parent
+- lifecycle cheat sheet - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 DOM APIs and concepts:
 - Shadow dom and references/usage in react vs angular  

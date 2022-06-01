@@ -7,7 +7,7 @@ anytime.
 given a function overlap (start time of A, end time of A, start time of B,
 end time of B, break minute of A)  
 find the overlap between A and B  
-overlap(3,7,5,24,6) === 2   
+overlap(3,7,5,8,6) === 2   
 (A and B formally overalp at minutes 5,6,7 but A is taking 
 a break at minute 6- so they really work together at minutes 5 and 7- hence a total of 2 is the answer)
 

@@ -11,6 +11,8 @@
   }
 
   const allCharsExceptLast = string.slice(0, -1);
+  // the below will also work
+  // const allCharsExceptLast = string.substring(0, string.length - 1);
   const lastChar = string[string.length - 1];
 
   // Recursive call: get all possible permutations for all chars except last

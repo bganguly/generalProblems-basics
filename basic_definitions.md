@@ -18,7 +18,7 @@ JS:
 - event loop  
 -- Hint: what is unusual (if anything) relative to other laguages  
 - variable scope and resolution  
--- Hint: Discuss local/global/shadowing
+-- Hint: Discuss local/global/shadowing (old school definitions)
 
 **=> Company B**     
 
@@ -28,6 +28,15 @@ React:
 - syntax to create component
 - syntax to alter state
 - discuss routing  
+
+**=> Company C**     
+
+JS: 
+- variable scope and resolution  
+-- discuss var vs let - https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var
+- how do you do a deep copy of an object (what might be a bug ?)
+-- the above is some old BS - circa 2016- https://stackoverflow.com/questions/40291987/javascript-deep-clone-object-with-circular-references
+- ever had memory 'leaks' in js (poorly worded- likely refers to the old school concern about dom and js circular references)
 
 **=> General questions**
 

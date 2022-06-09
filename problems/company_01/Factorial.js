@@ -8,6 +8,7 @@ const factorial = (n) => {
 
 console.log(factorial(5))
 
+// write a filter for returning only positive integers 
 const input = [-8, 2, -3]
 const filterPositives = () => {
   return input.filter(function(val,i) {

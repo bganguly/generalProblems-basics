@@ -6,17 +6,17 @@ const factorial = (n) => {
   }
 }
 
-console.log(factorial(5))
+console.log('factorial : ' ,factorial(5))
 
 // write a filter for returning only positive integers 
 const input = [-8, 2, -3]
 const filterPositives = () => {
-  return input.filter(function(val,i) {
+  return input.filter((val) => {
     return val > 0
   })
 }
 
-// console.log(filterPositives(input))
+console.log('filterPositives : ', filterPositives(input))
 
 // current
 // 3.0.1

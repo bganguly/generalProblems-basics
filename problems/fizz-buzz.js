@@ -1,5 +1,5 @@
 /*
-given an array of n  integers 
+given an array of 1..n  integers 
 print, on a new line for each int
 - fizz if divisible by 3
 - buzz if divisible by 5

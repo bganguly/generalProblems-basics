@@ -17,7 +17,7 @@
   
     // Put the last char in all possible positions for each of the above permutations
     const permutations = new Set();
-    console.log(new Date(), 'string', string, 'permutationsOfAllCharsExceptLast', permutationsOfAllCharsExceptLast);
+    // console.log(new Date(), 'string', string, 'permutationsOfAllCharsExceptLast', permutationsOfAllCharsExceptLast);
     const lastChar = string[string.length - 1];
     permutationsOfAllCharsExceptLast.forEach(eachPermutation => {
       for (let position = 0; position <= allCharsExceptLast.length; position++) {
@@ -25,7 +25,7 @@
         permutations.add(permutation);
       }
     });
-    console.log(new Date(),  'string', string,'permutationsInclLastChar', permutations);
+    // console.log(new Date(),  'string', string,'permutationsInclLastChar', permutations);
     return permutations;
   }
 

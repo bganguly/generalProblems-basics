@@ -10,8 +10,8 @@
   if (string.length <= 1) {
     return new Set([string]);
   } else {
+
     const allCharsExceptLast = string.slice(0, -1);
-  
     // Recursive call: get all possible permutations for all chars except last
     const permutationsOfAllCharsExceptLast = getPermutations(allCharsExceptLast);
   
@@ -19,12 +19,9 @@
     const permutations = new Set();
     console.log(new Date(), 'string', string, 'permutationsOfAllCharsExceptLast', permutationsOfAllCharsExceptLast);
     const lastChar = string[string.length - 1];
-    permutationsOfAllCharsExceptLast.forEach(permutationOfAllCharsExceptLast => {
+    permutationsOfAllCharsExceptLast.forEach(eachPermutation => {
       for (let position = 0; position <= allCharsExceptLast.length; position++) {
-        const permutation =
-          permutationOfAllCharsExceptLast.slice(0, position) 
-          + lastChar 
-          + permutationOfAllCharsExceptLast.slice(position);
+        const permutation = eachPermutation.slice(0, position) + lastChar + eachPermutation.slice(position);
         permutations.add(permutation);
       }
     });

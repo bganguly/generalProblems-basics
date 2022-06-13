@@ -10,25 +10,27 @@
   if (string.length <= 1) {
     return new Set([string]);
   } else {
-
     const allCharsExceptLast = string.slice(0, -1);
     // Recursive call: get all possible permutations for all chars except last
     const permutationsOfAllCharsExceptLast = getPermutations(allCharsExceptLast);
   
     // Put the last char in all possible positions for each of the above permutations
-    const permutations = new Set();
-    // console.log(new Date(), 'string', string, 'permutationsOfAllCharsExceptLast', permutationsOfAllCharsExceptLast);
-    const lastChar = string[string.length - 1];
-    permutationsOfAllCharsExceptLast.forEach(eachPermutation => {
-      for (let position = 0; position <= allCharsExceptLast.length; position++) {
-        const permutation = eachPermutation.slice(0, position) + lastChar + eachPermutation.slice(position);
-        permutations.add(permutation);
-      }
-    });
-    // console.log(new Date(),  'string', string,'permutationsInclLastChar', permutations);
-    return permutations;
+    return getPermutationSet(string, permutationsOfAllCharsExceptLast, allCharsExceptLast);
   }
+}
 
+const getPermutationSet = (string, permutationsOfAllCharsExceptLast, allCharsExceptLast) => {
+  console.log(new Date(), 'string', string, 'permutationsOfAllCharsExceptLast', permutationsOfAllCharsExceptLast);
+  const permutations = new Set();
+  const lastChar = string[string.length - 1];
+  permutationsOfAllCharsExceptLast.forEach(eachPermutation => {
+    for (let position = 0; position <= allCharsExceptLast.length; position++) {
+      const permutation = eachPermutation.slice(0, position) + lastChar + eachPermutation.slice(position);
+      permutations.add(permutation);
+    }
+  });
+  console.log(new Date(),  'string', string,'permutationsInclLastChar', permutations);
+  return permutations;
 }
 
 const inputStr = 'cat'

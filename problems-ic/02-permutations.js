@@ -20,7 +20,7 @@
 }
 
 const getPermutationSet = (string, permutationsOfAllCharsExceptLast, allCharsExceptLast) => {
-  console.log(new Date(), 'string', string, 'permutationsOfAllCharsExceptLast', permutationsOfAllCharsExceptLast);
+  // console.log(new Date(), 'string', string, 'permutationsOfAllCharsExceptLast', permutationsOfAllCharsExceptLast);
   const permutations = new Set();
   const lastChar = string[string.length - 1];
   permutationsOfAllCharsExceptLast.forEach(eachPermutation => {
@@ -29,7 +29,7 @@ const getPermutationSet = (string, permutationsOfAllCharsExceptLast, allCharsExc
       permutations.add(permutation);
     }
   });
-  console.log(new Date(),  'string', string,'permutationsInclLastChar', permutations);
+  // console.log(new Date(),  'string', string,'permutationsInclLastChar', permutations);
   return permutations;
 }
 

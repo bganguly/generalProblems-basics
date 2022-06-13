@@ -15,14 +15,14 @@
     const permutationsOfAllCharsExceptLast = getPermutations(allCharsExceptLast);
   
     // Put the last char in all possible positions for each of the above permutations
-    return getPermutationSet(string, permutationsOfAllCharsExceptLast, allCharsExceptLast);
+    const lastChar = string[string.length - 1];
+    return getPermutationSet(lastChar, allCharsExceptLast, permutationsOfAllCharsExceptLast );
   }
 }
 
-const getPermutationSet = (string, permutationsOfAllCharsExceptLast, allCharsExceptLast) => {
+const getPermutationSet = (lastChar, allCharsExceptLast, permutationsOfAllCharsExceptLast) => {
   // console.log(new Date(), 'string', string, 'permutationsOfAllCharsExceptLast', permutationsOfAllCharsExceptLast);
   const permutations = new Set();
-  const lastChar = string[string.length - 1];
   permutationsOfAllCharsExceptLast.forEach(eachPermutation => {
     for (let position = 0; position <= allCharsExceptLast.length; position++) {
       const permutation = eachPermutation.slice(0, position) + lastChar + eachPermutation.slice(position);

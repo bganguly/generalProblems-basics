@@ -1,32 +1,32 @@
-/*
-given any string - print its permutations
-*/
+// cats
+// - > process cat recursively, put 's' in all possible places inside/around 'cat'
+// - > process ca recursively, put 't' in all possible places inside/around 'ca'
 
 const getPermutations = inputStr => {
-  if (inputStr.length <=1) {
+  if (inputStr.length <= 1) {
     return new Set(inputStr)
   } else {
-    const inputStrReduced = inputStr.slice(0,inputStr.length - 1)
-    const getReducedPermutations = getPermutations(inputStrReduced)
-
-    const lastCharOfInputStr = inputStr[inputStr.length - 1]
-    return enlargeReducedPermuataions(lastCharOfInputStr, getReducedPermutations)
+    const allButLastChar = inputStr.slice(0, inputStr.length - 1)
+    const recursivePermutations = getPermutations(allButLastChar)
+    // do other processing
+    const lastChar = inputStr.slice(inputStr.length - 1)
+    return processUpdatedPermutations (lastChar, recursivePermutations)
   }
-
 }
 
-const enlargeReducedPermuataions = (lastCharOfInputStr, getReducedPermutations) => {
-  const permutations = new Set();
-  getReducedPermutations.forEach(eachReducedPermutation => {
-    for (let i=0; i<= eachReducedPermutation.length; i++) {
-      const newPermutation = eachReducedPermutation.slice(0,i)
-      + lastCharOfInputStr + eachReducedPermutation.slice(i)
-      permutations.add(newPermutation)
+const processUpdatedPermutations = (lastChar, recursivePermutations) => {
+  const updatedPermutations = new Set()
+
+  recursivePermutations.forEach(eachPermutation => {
+    for (let i=0; i<= eachPermutation.length; i++) {
+      updatedPermutations.add(
+        eachPermutation.slice(0, i)
+        + lastChar
+        + eachPermutation.slice(i)
+      )
     }
   })
-  return permutations
+  return updatedPermutations
 }
 
-const inputStr = 'cat'
-console.log('inputStr : ',inputStr)
-console.log(getPermutations(inputStr))
+console.log(getPermutations('cat'))

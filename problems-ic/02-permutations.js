@@ -8,7 +8,7 @@
 
   // Base case
   if (string.length <= 1) {
-    return new Set([string]);
+    return new Set(string);
   } else {
     const allCharsExceptLast = string.slice(0, -1);
     // Recursive call: get all possible permutations for all chars except last

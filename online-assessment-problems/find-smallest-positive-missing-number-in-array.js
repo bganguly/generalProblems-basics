@@ -81,7 +81,8 @@ const findSmallestPositiveUsingSet = inputArray => {
       positiveIntsSet.add(eachVal)
     }
   })
-  for (let i = 1; i <= positiveIntsSet.size + 1; i++) {
+  // middle expression , with the +1, returns 4 when set is {1,2,3}
+  for (let i = 1; i <= positiveIntsSet.size +1 ; i++) {
     if ( ! positiveIntsSet.has(i))   {
         return i;
     }

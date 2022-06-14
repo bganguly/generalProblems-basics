@@ -1,1 +1,0 @@
-This folder contains various questions observed during several online assessments.

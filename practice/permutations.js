@@ -18,6 +18,7 @@ const updateRecursivePermutations = (lastChar, recursivePermutations) => {
   const updatedPermutations = new Set()
 
   recursivePermutations.forEach(eachPermutation => {
+    // note the <= comparison (needed to fully scan in eachPermutation and append at end)
     for (let i=0; i<= eachPermutation.length; i++) {
       updatedPermutations.add(
         eachPermutation.slice(0, i)

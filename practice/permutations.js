@@ -10,11 +10,11 @@ const getPermutations = inputStr => {
     const recursivePermutations = getPermutations(allButLastChar)
     // do other processing
     const lastChar = inputStr.slice(inputStr.length - 1)
-    return processUpdatedPermutations (lastChar, recursivePermutations)
+    return updateRecursivePermutations (lastChar, recursivePermutations)
   }
 }
 
-const processUpdatedPermutations = (lastChar, recursivePermutations) => {
+const updateRecursivePermutations = (lastChar, recursivePermutations) => {
   const updatedPermutations = new Set()
 
   recursivePermutations.forEach(eachPermutation => {

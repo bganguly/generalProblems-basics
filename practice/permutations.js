@@ -4,7 +4,7 @@ given any string - print its permutations
 
 const getPermutations = inputStr => {
   if (inputStr.length <=1) {
-    return new Set([inputStr])
+    return new Set(inputStr)
   } else {
     const inputStrReduced = inputStr.slice(0,inputStr.length - 1)
     const getReducedPermutations = getPermutations(inputStrReduced)

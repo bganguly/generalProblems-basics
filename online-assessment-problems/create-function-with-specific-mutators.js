@@ -10,3 +10,108 @@ objectInstance.add('pant')
 objectInstance.getList() // should return ['shirt,'pant']
 
 */
+
+// fat arrows do not work for constructors in es6
+const dresses01 = /* () => */function() {
+  const arrayOfDresses = []
+  const isDressInCollection = (inputDress) => {
+    return arrayOfDresses.some((existingDress) => {
+      return existingDress === inputDress
+    }) 
+  }
+  const removeDress = (inputDress) => {
+    arrayOfDresses.forEach((existingDress, index) => {
+      if (existingDress === inputDress) {
+        arrayOfDresses[index] = null
+        return
+      }
+    }) 
+  }
+  this.add = (dress) => {
+    if ( ! isDressInCollection(dress)) {
+      arrayOfDresses.push(dress)
+    }
+  }
+  this.remove = (dress) => {
+    removeDress(dress)
+  }
+  this.getList = () => {
+    return arrayOfDresses.filter( dress => dress)
+  }
+}
+
+let dressObject = new dresses01();
+dressObject.add('shirt')
+dressObject.add('shirt')
+// console.log(dressObject.getList())
+
+// standard function approach
+function dresses02 () {
+  const arrayOfDresses = []
+  const isDressInCollection = (inputDress) => {
+    return arrayOfDresses.some((existingDress) => {
+      return existingDress === inputDress
+    }) 
+  }
+  const removeDress = (inputDress) => {
+    arrayOfDresses.forEach((existingDress, index) => {
+      if (existingDress === inputDress) {
+        arrayOfDresses[index] = null
+        return
+      }
+    }) 
+  }
+  this.add = (dress) => {
+    if ( ! isDressInCollection(dress)) {
+      arrayOfDresses.push(dress)
+    }
+  }
+  this.remove = (dress) => {
+    removeDress(dress)
+  }
+  this.getList = () => {
+    return arrayOfDresses.filter( dress => dress)
+  }
+}
+
+dressObject = new dresses02();
+dressObject.add('shirt')
+// console.log(dressObject.getList())
+
+// class based  approach
+class dresses03 {
+  constructor () {
+    const arrayOfDresses = []
+    const isDressInCollection = (inputDress) => {
+      return arrayOfDresses.some((existingDress) => {
+        return existingDress === inputDress
+      }) 
+    }
+    const removeDress = (inputDress) => {
+      arrayOfDresses.forEach((existingDress, index) => {
+        if (existingDress === inputDress) {
+          arrayOfDresses[index] = null
+          return
+        }
+      }) 
+    }
+    this.add = (dress) => {
+      if ( ! isDressInCollection(dress)) {
+        arrayOfDresses.push(dress)
+      }
+    }
+    this.remove = (dress) => {
+      removeDress(dress)
+    }
+    this.getList = () => {
+      return arrayOfDresses.filter( dress => dress)
+    }
+  }
+}
+
+dressObject = new dresses03();
+dressObject.add('shirt')
+dressObject.add('pant')
+console.log(dressObject.getList())
+dressObject.remove('shirt')
+console.log(dressObject.getList())

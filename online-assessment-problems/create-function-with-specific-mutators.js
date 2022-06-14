@@ -19,6 +19,11 @@ const dresses01 = /* () => */function() {
       return existingDress === inputDress
     }) 
   }
+  const addDress = (inputDress) => {
+    if ( ! isDressInCollection(inputDress)) {
+      arrayOfDresses.push(inputDress)
+    }
+  }
   const removeDress = (inputDress) => {
     arrayOfDresses.forEach((existingDress, index) => {
       if (existingDress === inputDress) {
@@ -27,23 +32,27 @@ const dresses01 = /* () => */function() {
       }
     }) 
   }
+  const getListOfDresses = () => {
+    return arrayOfDresses.filter( dress => dress)
+  }
   this.add = (dress) => {
-    if ( ! isDressInCollection(dress)) {
-      arrayOfDresses.push(dress)
-    }
+    addDress(dress)
   }
   this.remove = (dress) => {
     removeDress(dress)
   }
   this.getList = () => {
-    return arrayOfDresses.filter( dress => dress)
+    return getListOfDresses()
   }
 }
 
 let dressObject = new dresses01();
 dressObject.add('shirt')
 dressObject.add('shirt')
-// console.log(dressObject.getList())
+dressObject.add('pant')
+console.log(dressObject.getList())
+dressObject.remove('shirt')
+console.log(dressObject.getList())
 
 // standard function approach
 function dresses02 () {

@@ -90,14 +90,17 @@ const findSmallestPositiveUsingSet = inputArray => {
 }
 
 /*
-input [1,2,3,6,1] should yield  4
+input [1,2,3,6,1] should yield  4 because that is the smallest positive int not present
 input [1,2,3] should yield  4
-input [-1, -3] should yield 1
+input [-1, -3] should yield 1 because the minimum positive expected is always 1
 */
- console.log('[1,2,3,6,1] === 4 | ',findSmallestPositiveUsingSet([1,2,3,6,1]) === 4)
- console.log('[1,2,3] === 4 |  ', findSmallestPositiveUsingSet([1,2,3]) === 4)
- console.log('[-1, -3] === 1 |  ', findSmallestPositiveUsingSet([-1,-3]) === 1)
- console.log('[-3,1] === 2 |  ', findSmallestPositiveUsingSet([-3,1]) === 2)
- console.log('[-3,1,-4,2] === 3 |  ', findSmallestPositiveUsingSet([-3,1,-4,2]) === 3)
- console.log('[-3,1,-4,3] === 2 |  ', findSmallestPositiveUsingSet([-3,1,-4,3]) === 2)
- console.log('[-3,3,-4,7] === 1 |  ', findSmallestPositiveUsingSet([-3,3,-4,7]) === 1)
+console.log('[] === 1 |  ', findSmallestPositiveUsingSet([]) === 1)
+console.log('[1,2,3] === 4 |  ', findSmallestPositiveUsingSet([1,2,3]) === 4)
+console.log('[-1, -3] === 1 |  ', findSmallestPositiveUsingSet([-1,-3]) === 1)
+console.log('[-3,1] === 2 |  ', findSmallestPositiveUsingSet([-3,1]) === 2)
+console.log('[-3,2] === 1 |  ', findSmallestPositiveUsingSet([-3,2]) === 1)
+console.log('[-3,1,-4,2] === 3 |  ', findSmallestPositiveUsingSet([-3,1,-4,2]) === 3)
+console.log('[-3,1,-4,3] === 2 |  ', findSmallestPositiveUsingSet([-3,1,-4,3]) === 2)
+console.log('[-3,3,-4,7] === 1 |  ', findSmallestPositiveUsingSet([-3,3,-4,7]) === 1)
+console.log('[1,2,3,6,1] === 4 | ',findSmallestPositiveUsingSet([1,2,3,6,1]) === 4)
+

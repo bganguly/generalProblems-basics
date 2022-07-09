@@ -103,4 +103,3 @@ console.log('[-3,1,-4,2] === 3 |  ', findSmallestPositiveUsingSet([-3,1,-4,2]) =
 console.log('[-3,1,-4,3] === 2 |  ', findSmallestPositiveUsingSet([-3,1,-4,3]) === 2)
 console.log('[-3,3,-4,7] === 1 |  ', findSmallestPositiveUsingSet([-3,3,-4,7]) === 1)
 console.log('[1,2,3,6,1] === 4 | ',findSmallestPositiveUsingSet([1,2,3,6,1]) === 4)
-
